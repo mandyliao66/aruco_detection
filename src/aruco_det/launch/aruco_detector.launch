@@ -1,0 +1,11 @@
+<launch>
+  <!-- ArUco parameters -->
+  <arg name="DICTIONARY" default="1" doc="ArUco dictionary to use: 0=ARUCO, 1=ARUCO_MIP_36h12, 2=ARUCO_MIP_25h7, 3=ARUCO_MIP_16h3" />
+
+  <node pkg="aruco_det" type="aruco_det" name="aruco_det" output="screen">
+    <!-- Load camera calibration parameters -->
+    
+
+    <param name="DICTIONARY" value="$(arg DICTIONARY)" />
+  </node>
+</launch>
